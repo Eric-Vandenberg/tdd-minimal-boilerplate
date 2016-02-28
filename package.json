@@ -1,15 +1,17 @@
 {
   "name": "tddtest",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
+  "repository" : "https://github.com/Eric-Vandenberg/tdd-minimal-boilerplate.git",
   "main": "index.js",
   "scripts": {
+    "browserify": "node_modules\\.bin\\browserify -o bundle.js all_test_file.js",
     "test": "npm run bundle && node_modules\\.bin\\mocha -u tdd -R spec tests/*.js",
-    "coverage": "npm run bundle && node_modules\\.bin\\istanbul cover node_modules/mocha/bin/_mocha -- -u tdd -R spec tests/*.js",
+    "coverage": "node_modules\\.bin\\istanbul cover node_modules/mocha/bin/_mocha -- -u tdd -R spec tests/*.js && npm run bundle",
     "jshint": "node_modules\\.bin\\jshint libs tests",
     "jscs": "node_modules\\.bin\\jscs -c .jscsrc libs tests",
     "jsdoc": "node_modules\\.bin\\jsdoc -c .jsdocrc libs",
-    "bundle": "node load_all_test_files.js && node_modules\\.bin\\browserify -o bundle.js all_test_file.js",
+    "bundle": "node load_all_test_files.js && npm run browserify",
     "all": "npm run jshint && npm run jscs && npm run coverage && npm run jsdoc"
   },
   "author": "",
