@@ -4,7 +4,7 @@
  * @constructor
  */
 var StringCalc = function() {
-    this.defaultProp = '';
+	this.defaultProp = '';
 };
 
 /**
@@ -12,7 +12,7 @@ var StringCalc = function() {
  *
  */
 StringCalc.prototype.intAdd = function(str) {
-    this.defaultProp = str;
+	this.defaultProp = str;
 };
 
 module.exports = StringCalc;
