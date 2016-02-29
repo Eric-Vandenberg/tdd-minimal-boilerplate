@@ -1,2 +1,1 @@
-require("./tests/stringCalc.js");
-require("./tests/test.js");
+require("./tests/stringCalc.js");require("./tests/test.js");

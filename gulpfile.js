@@ -10,7 +10,7 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
 var config = {
-	entryFile: './all_test_file.js',
+	entryFile: './es6_test_file.js',
 	outputDir: './dist/',
 	outputFile: 'bundle.js'
 };
