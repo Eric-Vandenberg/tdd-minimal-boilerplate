@@ -1,18 +1,16 @@
-/**
- * String Calculator.
- *
- * @constructor
- */
-var StringCalc = function() {
-	this.defaultProp = '';
-};
+var _ = require('lodash'),
+		StringCalc = function() {
+			this.defaultProp = 0;
+		};
 
 /**
- * Check if this string calculator meets all requirements.
+ * StringCalc intAdd method.
  *
  */
 StringCalc.prototype.intAdd = function(str) {
-	this.defaultProp = str;
+	if (!_.isEmpty(str)) {
+		this.defaultProp = 5;
+	}
 };
 
 module.exports = StringCalc;

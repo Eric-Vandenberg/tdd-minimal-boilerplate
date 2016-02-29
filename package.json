@@ -12,7 +12,8 @@
     "jscs": "node_modules\\.bin\\jscs -c .jscsrc libs tests",
     "jsdoc": "node_modules\\.bin\\jsdoc -c .jsdocrc libs",
     "write": "node load_all_test_files.js",
-    "all": "npm run jshint && npm run jscs && npm run jsdoc && npm run coverage && npm run write && npm run bundle"
+    "all": "npm run jshint && npm run jscs && npm run jsdoc && npm run coverage && npm run write && npm run bundle",
+    "all-es6": "npm run jshint && npm run jscs && npm run jsdoc && npm run coverage && gulp watch"
   },
   "author": "",
   "license": "BSD-2-Clause",
@@ -23,9 +24,17 @@
     "chai": "~1.9.1",
     "jshint": "~2.5.5",
     "jscs": "~1.6.0",
-    "browserify": "~5.11.0",
+    "browserify": "^6.3.3",
     "jsdoc": "^3.3.0-alpha9",
     "sinon": "~1.10.3",
-    "underscore": "~1.7.0"
+    "underscore": "~1.7.0",
+    "lodash": "4.5.1",
+    "babelify": "~5.0.3",
+    "browser-sync": "2.11.1",
+    "gulp": "~3.9.1",
+    "gulp-rename": "1.2.2",
+    "rimraf": "~2.2.8",
+    "watchify": "3.7.0",
+    "vinyl-source-stream": "1.1.0"
   }
 }

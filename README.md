@@ -10,7 +10,7 @@ Run tests (also creates a bundle before testing):
 
     npm test
 
-Run test coverage report (also creates a bundle before testing):
+Run test coverage report:
 
     npm run coverage
 
@@ -29,3 +29,9 @@ Run jscs (code style validation):
 (Optional) Create bundle to be used with the *`tests/index.html`*:
 
     npm run bundle
+
+(ES6) Live reload with browser-sync and compile es6 with *`./index.html`*:
+
+    npm run all-es6
+
+
