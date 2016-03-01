@@ -4,7 +4,7 @@
  * @constructor
  */
 var StringCalc = function() {
-	this.defaultProp = '';
+	this.defaultProp = 0;
 };
 
 /**
@@ -12,7 +12,21 @@ var StringCalc = function() {
  *
  */
 StringCalc.prototype.intAdd = function(str) {
-	this.defaultProp = str;
+	var numberPattern = /\d+/g,
+		arr;
+	if (str.trim().length === 0) {
+		return;
+	}
+	arr = str.match(numberPattern);
+	this.defaultProp = this.sum(arr);
+};
+
+StringCalc.prototype.sum = function(arr) {
+	var total = 0;
+	for (var i = arr.length; i--;) {
+		total += parseInt(arr[i], 10);
+	}
+	return total;
 };
 
 module.exports = StringCalc;
